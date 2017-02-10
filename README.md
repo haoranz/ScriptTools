@@ -10,10 +10,9 @@
 > 配置文件为同目录下的"zj-conf.ini"
 
 - **zj-conf.ini**	配置文件
+
 > [global]  
 > dateStart = 2015-1-10  
 > numStart = 100  
 > username = xxxxxx  
 > password = xxxxxx  
-
-
