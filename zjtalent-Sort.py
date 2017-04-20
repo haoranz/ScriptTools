@@ -81,24 +81,25 @@ def get_wait_remain_spider():
 
 	#Get请求完成登录状态
 	logRequest = requests.Request('GET', url_login,cookies=res0_cookies,headers=headers).prepare()
-	print u"目前的Cookie是："+str(res0_cookies)
+	#print u"目前的Cookie是："+str(res0_cookies)
+	print u"初始化请求,稍等...\n\n"
 	s.send(logRequest)
 
 	#Get请求获取数据页面
 	resRequest = requests.Request('GET', url_result,cookies=res0_cookies,headers=headers).prepare()	
 	res2 = s.send(resRequest)
-
+	print u"获取实时数据成功\n"
 	soup = BeautifulSoup(res2.content,"html.parser")
 	resNum = soup.find_all("td")
 	#序号 申请单号 轮候人 申请日期 公寓名称 房型 优惠价格区间(元/月) 企业审核 申请状态 接受调剂 排名 来源 操作
 	resArr = ["序号","申请单号","轮候人","申请日期","公寓名称","房型","优惠价格区间(元/月)","","企业审核","申请状态","接受调剂","排名","来源"]	
 	# print soup.html
 	# print len(resNum)
-	for i in range(12):
-		if i==7:
-			continue
-		print resArr[i]+":"+resNum[i].text.strip().replace(" ","")
-	print u"\n获取实时数据成功，目前排名为："+resNum[11].text.strip().replace(" ","")
+	# for i in range(12):
+	# 	if i==7:
+	# 		continue
+	# 	print resArr[i]+":"+resNum[i].text.strip().replace(" ","")
+	print u"目前排名为："+resNum[11].text.strip().replace(" ","")
 	return int(resNum[11].text.strip().replace(" ",""))
 
 if __name__ == "__main__":
