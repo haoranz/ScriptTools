@@ -3,7 +3,8 @@
 ----------
 > @Time    : 2017/5/27 17:27  
 > @Author  : Haoranz  
-> @Function: 
-    sendMQ.py   Send messages to RabbitMQ.
-    recieveMQ.py    Consume messages and insert 100 records into DB every time.
-    msmq_logs.sql   DB table.
+> @Function: RabbitMQ Messages Handing and MySQL using
+----------
+> sendMQ.py   Send messages to RabbitMQ.  
+> recieveMQ.py    Consume messages and insert 100 records into DB every time.  
+> msmq_logs.sql   DB table.  
