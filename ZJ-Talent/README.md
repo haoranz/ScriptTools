@@ -8,6 +8,7 @@
 > 按照之前规律推算大概能排到的日期  
 > haoranz@2017.2.9  
 > 配置文件为同目录下的"zj-conf.ini"
+> 需要安装requests,BeautifulSoup模块
 
 - **zj-conf.ini**	配置文件
 
